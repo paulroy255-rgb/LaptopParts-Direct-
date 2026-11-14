@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LaptopParts Direct supplies laptop spare parts for retail customers and repair businesses. Find screens, batteries, keyboards, hinges, fans, chargers and more.">
+  <meta name="theme-color" content="#10243a">
+  <title>LaptopParts Direct | Laptop Spare Parts Wholesale & Retail</title>
+  <style>
+    :root{--navy:#10243a;--blue:#1769aa;--cyan:#eaf5ff;--ink:#172536;--muted:#617184;--line:#dce5ee;--bg:#f6f8fb;--white:#fff;--green:#13834b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+    a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 12px #07152525}
+    .top{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-size:21px;font-weight:800;letter-spacing:.2px;text-decoration:none}.brand span{color:#79c5ff}
+    nav{display:flex;gap:20px;align-items:center}nav a{text-decoration:none;font-size:14px;color:#e6eff8}
+    .call{background:#fff;color:var(--navy);font-weight:700;padding:10px 15px;border-radius:8px;text-decoration:none;white-space:nowrap}
+    .hero{background:linear-gradient(120deg,#10243a,#174f7c);color:#fff;padding:64px 0 58px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+    .eyebrow{color:#9bd5ff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.4px}
+    h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:12px 0 16px;letter-spacing:-1px}
+    .hero p{color:#e2edf7;max-width:650px;font-size:17px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .btn{display:inline-block;border:0;border-radius:9px;padding:13px 18px;font-weight:700;text-decoration:none;cursor:pointer;font-size:15px}
+    .btn-primary{background:#fff;color:var(--navy)}.btn-outline{border:1px solid #a9c9e4;color:#fff;background:transparent}
+    .hero-card{background:#ffffff12;border:1px solid #ffffff30;border-radius:16px;padding:23px}
+    .hero-card strong{display:block;font-size:19px;margin-bottom:8px}.hero-card ul{padding-left:19px;color:#e6f2fc;margin-bottom:0}
+    section{padding:48px 0}.section-head{margin-bottom:23px}.section-head h2{font-size:29px;margin:0 0 7px}.section-head p{margin:0;color:var(--muted)}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-1px}
+    .trust div,.category,.product,.panel,.contact-card{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:18px}
+    .trust b{display:block}.trust span{color:var(--muted);font-size:13px}
+    .tools{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+    input,select,textarea{width:100%;padding:13px;border:1px solid #cbd7e2;border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+    .tools input{flex:1;min-width:220px}.tools select{max-width:230px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .category{display:flex;gap:13px;align-items:center;text-decoration:none;transition:.15s}
+    .category:hover,.product:hover{border-color:#8dbde5;transform:translateY(-2px)}
+    .symbol{width:48px;height:48px;border-radius:12px;background:var(--cyan);display:grid;place-items:center;font-size:24px;flex-shrink:0}
+    .category b{display:block}.category small{color:var(--muted)}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .product{transition:.15s}.product .symbol{margin-bottom:12px}.product h3{font-size:17px;margin:0 0 5px}.product p{font-size:13px;color:var(--muted);min-height:40px;margin:0 0 14px}
+    .tag{font-size:11px;color:#245d8a;background:#eaf5ff;padding:5px 8px;border-radius:20px;display:inline-block;margin-bottom:9px}
+    .product button{width:100%;background:var(--navy);color:#fff}
+    .note{background:#fff8e8;border:1px solid #f0dfb6;color:#654d1b;padding:13px 15px;border-radius:9px;font-size:13px;margin-top:18px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h3{margin:0 0 8px}.panel p{color:var(--muted);margin-top:0}
+    form{display:grid;gap:12px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:13px;font-weight:700;display:grid;gap:6px}
+    .submit{background:var(--green);color:white;border:0;border-radius:9px;padding:14px;font-size:15px;font-weight:700;cursor:pointer}
+    .small{font-size:12px;color:var(--muted)}
+    footer{background:#0b1b2b;color:#dce8f3;padding:30px 0}footer a{color:#fff}footer p{margin:5px 0;color:#b9c9d8;font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .hidden{display:none!important}
+    @media(max-width:760px){nav{display:none}.hero{padding:45px 0}.hero-grid,.two{grid-template-columns:1fr}.grid,.products{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:1fr}.hero-card{max-width:520px}}
+    @media(max-width:480px){.grid,.products{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.brand{font-size:18px}.call{padding:9px 11px;font-size:13px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#"><span>LaptopParts</span> Direct</a>
+    <nav aria-label="Main navigation">
+      <a href="#categories">Categories</a><a href="#catalogue">Catalogue</a><a href="#wholesale">Wholesale</a><a href="#enquiry">Enquiry</a>
+    </nav>
+    <a class="call" href="tel:+919681964310">Call 96819 64310</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Retail & wholesale supply</div>
+        <h1>Find the right part.<br>Get your laptop working.</h1>
+        <p>Laptop spare parts for individual customers, technicians and repair businesses. Search by part or laptop model and request availability and pricing.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#catalogue">Explore spare parts</a>
+          <a class="btn btn-outline" href="#enquiry">Request a quotation</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <strong>Parts support across laptop brands</strong>
+        <ul><li>HP, Dell, Lenovo, Acer, ASUS and more</li><li>Retail and bulk enquiries</li><li>Model/part-number compatibility checks</li><li>Availability confirmed before payment</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap trust">
+    <div><b>Retail & wholesale</b><span>Enquiries for single pieces and bulk requirements</span></div>
+    <div><b>Model-based assistance</b><span>Share the exact model or part number</span></div>
+    <div><b>Direct contact</b><span>Speak to the supplier by phone</span></div>
+  </div>
+
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head"><h2>Shop by category</h2><p>Choose a part type to see matching catalogue items.</p></div>
+      <div class="grid" id="categoryGrid">
+        <a class="category" href="#catalogue" data-filter="Screens"><span class="symbol">🖥️</span><span><b>Laptop screens</b><small>LCD, LED and display panels</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Batteries"><span class="symbol">🔋</span><span><b>Batteries</b><small>Replacement laptop batteries</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Keyboards"><span class="symbol">⌨️</span><span><b>Keyboards</b><small>Model-specific keyboards</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Cooling"><span class="symbol">🌀</span><span><b>Cooling fans</b><small>Fans and thermal parts</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Power"><span class="symbol">🔌</span><span><b>Power & charging</b><small>Chargers, DC jacks and cables</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Body"><span class="symbol">🧩</span><span><b>Body parts</b><small>Hinges, covers and palmrests</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Motherboards"><span class="symbol">💻</span><span><b>Motherboards</b><small>System boards and components</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Upgrades"><span class="symbol">⚡</span><span><b>RAM & SSD</b><small>Memory and storage upgrades</small></span></a>
+        <a class="category" href="#catalogue" data-filter="Other"><span class="symbol">🛠️</span><span><b>Other spares</b><small>Wi-Fi cards, cables and more</small></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogue" style="background:#eef3f8">
+    <div class="wrap">
+      <div class="section-head"><h2>Spare-parts catalogue</h2><p>These are enquiry categories, not live stock listings. Confirm exact compatibility and availability before ordering.</p></div>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search: Dell Inspiron 15, keyboard, battery..." aria-label="Search catalogue">
+        <select id="brand" aria-label="Filter by brand">
+          <option value="">All brands</option><option>HP</option><option>Dell</option><option>Lenovo</option><option>Acer</option><option>ASUS</option><option>Apple</option><option>Other</option>
+        </select>
+        <select id="category" aria-label="Filter by category">
+          <option value="">All categories</option><option>Screens</option><option>Batteries</option><option>Keyboards</option><option>Cooling</option><option>Power</option><option>Body</option><option>Motherboards</option><option>Upgrades</option><option>Other</option>
+        </select>
+      </div>
+      <div class="products" id="productGrid"></div>
+      <div class="note">Important: Product images, prices, stock counts and part numbers have not been supplied yet, so this starter catalogue does not invent them. Add only verified items and prices after checking your actual stock.</div>
+    </div>
+  </section>
+
+  <section id="wholesale">
+    <div class="wrap two">
+      <div class="panel">
+        <h3>For laptop repair shops & dealers</h3>
+        <p>Send your required part list for a wholesale quotation. Include quantity, brand, model and part number wherever possible.</p>
+        <ul><li>Bulk quantity enquiries</li><li>Repeat supply enquiries</li><li>Compatibility confirmation</li><li>Shipping terms confirmed before order</li></ul>
+        <a class="btn btn-primary" style="background:var(--navy);color:#fff" href="#enquiry">Request wholesale quote</a>
+      </div>
+      <div class="panel">
+        <h3>For individual customers</h3>
+        <p>Not sure which spare part fits? Share the laptop brand, full model number and a clear photo of the old part or its label.</p>
+        <ul><li>Single-piece enquiries</li><li>Part-number assistance</li><li>Price and availability check</li><li>Warranty/return terms discussed before payment</li></ul>
+        <a class="btn btn-primary" style="background:var(--navy);color:#fff" href="#enquiry">Find my part</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="enquiry">
+    <div class="wrap two">
+      <div>
+        <div class="section-head"><h2>Request a price or availability</h2><p>Fill in the details. Your phone's SMS app will open with your enquiry ready to send to the supplier.</p></div>
+        <div class="contact-card">
+          <b>Call the supplier</b>
+          <p style="margin:5px 0 12px;color:var(--muted)">Business phone: 96819 64310</p>
+          <a class="btn btn-primary" style="background:var(--navy);color:#fff" href="tel:+919681964310">Call now</a>
+        </div>
+      </div>
+      <div class="panel">
+        <form id="enquiryForm">
+          <div class="form-row">
+            <label>Your name<input name="name" required placeholder="Name"></label>
+            <label>Customer type<select name="customerType"><option>Retail customer</option><option>Repair shop</option><option>Dealer / wholesaler</option></select></label>
+          </div>
+          <div class="form-row">
+            <label>Brand<select name="brand"><option>HP</option><option>Dell</option><option>Lenovo</option><option>Acer</option><option>ASUS</option><option>Apple</option><option>Other</option></select></label>
+            <label>Part required<input name="part" required placeholder="e.g. keyboard, hinge, screen"></label>
+          </div>
+          <label>Exact laptop model / part number<input name="model" required placeholder="e.g. Inspiron 15 3520 / part number"></label>
+          <div class="form-row">
+            <label>Quantity<input name="quantity" type="number" min="1" value="1" required></label>
+            <label>City / PIN code<input name="location" placeholder="Delivery location"></label>
+          </div>
+          <label>Additional details<textarea name="details" rows="3" placeholder="Share connector type, screen size, photo availability, or other details"></textarea></label>
+          <button class="submit" type="submit">Prepare enquiry by SMS</button>
+          <p class="small">This website does not take online payments. Check stock, final price, shipping, warranty and return terms with the supplier before paying. SMS charges may apply depending on your mobile plan.</p>
+          <p id="formMessage" class="small" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><b>LaptopParts Direct</b><p>Laptop spare parts for retail and wholesale customers.</p></div>
+    <div><b>Business enquiries</b><p><a href="tel:+919681964310">96819 64310</a></p><p>Call to confirm stock, pricing and delivery.</p></div>
+    <div><p>© <span id="year"></span> LaptopParts Direct. All rights reserved.</p><p>Brand names are used only to identify compatibility. Not an authorised brand service centre unless expressly stated.</p></div>
+  </div>
+</footer>
+
+<script>
+const items = [
+  {name:"Laptop LCD / LED screen",cat:"Screens",icon:"🖥️",desc:"Replacement display panels. Confirm size, resolution, connector and mounting type."},
+  {name:"Laptop battery",cat:"Batteries",icon:"🔋",desc:"Model-compatible replacement batteries. Confirm voltage, capacity and part number."},
+  {name:"Laptop keyboard",cat:"Keyboards",icon:"⌨️",desc:"Built-in replacement keyboards. Confirm layout, backlight and connector."},
+  {name:"Laptop cooling fan",cat:"Cooling",icon:"🌀",desc:"CPU/GPU cooling fans. Confirm fan code, connector and mounting."},
+  {name:"Laptop charger / adapter",cat:"Power",icon:"🔌",desc:"Power adapters. Confirm wattage, voltage, amperage and plug type."},
+  {name:"DC charging jack / cable",cat:"Power",icon:"⚡",desc:"Charging port and cable assemblies. Confirm exact laptop model and connector."},
+  {name:"Laptop hinges",cat:"Body",icon:"🧩",desc:"Left/right hinge sets. Confirm model and side required."},
+  {name:"Laptop body / bottom cover",cat:"Body",icon:"💻",desc:"Top covers, bottom cases, bezels and palmrests. Confirm colour and part number."},
+  {name:"Laptop motherboard",cat:"Motherboards",icon:"🔧",desc:"System board enquiries. Confirm board number, CPU/GPU configuration and revision."},
+  {name:"RAM memory",cat:"Upgrades",icon:"⚡",desc:"Memory upgrades. Confirm DDR generation, speed, capacity and compatibility."},
+  {name:"SSD storage",cat:"Upgrades",icon:"💾",desc:"SATA and NVMe storage enquiries. Confirm form factor and interface."},
+  {name:"Display cable / Wi-Fi card / other",cat:"Other",icon:"🛠️",desc:"Other internal parts and cables. Share the part number or clear photos."}
+];
+const grid=document.getElementById("productGrid");
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const b=document.getElementById("brand").value;
+ const c=document.getElementById("category").value;
+ const filtered=items.filter(x=>(!q||(x.name+" "+x.cat+" "+x.desc).toLowerCase().includes(q))&&(!c||x.cat===c));
+ grid.innerHTML="";
+ filtered.forEach(x=>{
+  const el=document.createElement("article");el.className="product";
+  el.innerHTML=`<div class="symbol">${x.icon}</div><span class="tag">${x.cat}</span><h3>${x.name}</h3><p>${x.desc}</p><button class="btn" type="button">Enquire about this part</button>`;
+  el.querySelector("button").addEventListener("click",()=>{
+   document.querySelector('[name="part"]').value=x.name;
+   document.querySelector('[name="brand"]').value=b||"HP";
+   document.getElementById("enquiry").scrollIntoView({behavior:"smooth"});
+   document.querySelector('[name="model"]').focus();
+  });
+  grid.appendChild(el);
+ });
+ if(!filtered.length)grid.innerHTML="<p>No matching category found. Try another search or submit a custom enquiry.</p>";
+}
+["search","brand","category"].forEach(id=>document.getElementById(id).addEventListener("input",render));
+document.querySelectorAll("[data-filter]").forEach(a=>a.addEventListener("click",()=>{document.getElementById("category").value=a.dataset.filter;render()}));
+document.getElementById("enquiryForm").addEventListener("submit",e=>{
+ e.preventDefault();const f=new FormData(e.target);
+ const msg=[
+ "LaptopParts Direct - Spare Parts Enquiry",
+ "Name: "+f.get("name"),
+ "Customer type: "+f.get("customerType"),
+ "Brand: "+f.get("brand"),
+ "Part required: "+f.get("part"),
+ "Laptop model / part number: "+f.get("model"),
+ "Quantity: "+f.get("quantity"),
+ "City / PIN: "+(f.get("location")||"Not provided"),
+ "Details: "+(f.get("details")||"None")
+ ].join("\n");
+ document.getElementById("formMessage").textContent="Opening your SMS app. Review the enquiry and press Send.";
+ window.location.href="sms:+919681964310?body="+encodeURIComponent(msg);
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
